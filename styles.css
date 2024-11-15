@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* Primary Colors */
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  /* Neutral Colors */
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+
+  --xxs: 0.25rem;
+  --xs: 0.5rem;
+  --s: 0.75rem;
+  --m: 1rem;
+  --l: 1.25rem;
+  --xl: 1.75rem;
+  --xxl: 2.5rem;
+  --xxxl: 3.5rem;
+  --xxxxl: 5rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--very-light-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--xxxl) var(--xl);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--xxxxl);
+  text-align: center;
+}
+
+header h1 {
+  color: var(--very-dark-blue);
+  font-size: clamp(var(--xl), 2vw, var(--xxxxl));
+  font-weight: 200;
+}
+
+header h2 {
+  color: var(--very-dark-blue);
+  font-size: clamp(var(--xl), 2vw, var(--xxxxl));
+  margin-bottom: var(--l);
+  font-weight: 600;
+}
+
+header p {
+  color: var(--grayish-blue);
+  font-size: var(--m);
+  line-height: var(--xl);
+}
+
+section {
+  border-radius: var(--s);
+  box-shadow: 0 var(--s) var(--l) rgba(0, 0, 0, 0.1);
+  padding: var(--xxl);
+  margin-bottom: var(--xl);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  /* background-color: var(--red); */
+}
+section#supervisor::before {
+  background-color: var(--red);
+}
+section#team-builder::before {
+  background-color: var(--cyan);
+}
+section#karma::before {
+  background-color: var(--orange);
+}
+section#calculator::before {
+  background-color: var(--blue);
+}
+
+section > h3 {
+  color: var(--very-dark-blue);
+  font-size: var(--l);
+  margin-bottom: var(--xs);
+  font-weight: 500;
+}
+
+section > p {
+  color: var(--grayish-blue);
+  font-weight: 300;
+  font-size: var(--m);
+  margin-bottom: var(--xxxxl);
+  line-height: 1.6rem;
+}
+
+section > img {
+  align-self: flex-end;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  main > * {
+    flex: 1;
+  }
+
+  section {
+    max-width: 350px;
+  }
+}
