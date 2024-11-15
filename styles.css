@@ -48,17 +48,18 @@ header {
   align-items: center;
   margin-bottom: var(--xxxxl);
   text-align: center;
+  max-width: 500px;
 }
 
 header h1 {
   color: var(--very-dark-blue);
-  font-size: clamp(var(--xl), 2vw, var(--xxxxl));
+  font-size: clamp(var(--xl), 2.5vw, var(--xxxxl));
   font-weight: 200;
 }
 
 header h2 {
   color: var(--very-dark-blue);
-  font-size: clamp(var(--xl), 2vw, var(--xxxxl));
+  font-size: clamp(var(--xl), 2.5vw, var(--xxxxl));
   margin-bottom: var(--l);
   font-weight: 600;
 }
